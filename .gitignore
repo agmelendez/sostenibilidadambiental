@@ -1,0 +1,87 @@
+# IDAC Project - Git Ignore Configuration
+
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+.#*
+
+# Editor directories and files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
+
+# R specific
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+*.Rproj
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+
+# Node modules (if using Node.js tools in future)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Log files
+*.log
+logs/
+
+# Build outputs
+dist/
+build/
+*.o
+*.exe
+
+# Sensitive information (should never be committed)
+.env
+.env.local
+.env.*.local
+credentials.json
+secrets.json
+config/local.js
+
+# Large data files (consider using Git LFS)
+# Uncomment if needed
+# *.zip
+# *.tar.gz
+# large_dataset.csv
+
+# Test outputs
+test-results/
+coverage/
+.nyc_output/
+
+# Cache directories
+.cache/
+.parcel-cache/

@@ -1,0 +1,47 @@
+# Git Attributes Configuration for IDAC Project
+
+# Handle line endings automatically for cross-platform compatibility
+* text=auto
+
+# Explicitly declare text files
+*.md text
+*.txt text
+*.csv text
+*.R text
+*.js text
+*.css text
+*.html text
+*.xml text
+*.json text
+
+# Denote all files that are truly binary and should not be modified
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.xlsx binary
+*.xls binary
+*.docx binary
+*.doc binary
+*.pptx binary
+*.ppt binary
+
+# Git LFS (Large File Storage) tracking for large files
+# Uncomment these lines if you plan to use Git LFS
+# *.pdf filter=lfs diff=lfs merge=lfs -text
+# *.xlsx filter=lfs diff=lfs merge=lfs -text
+# *.docx filter=lfs diff=lfs merge=lfs -text
+
+# Archive files
+*.zip binary
+*.tar binary
+*.gz binary
+*.rar binary
+*.7z binary
+
+# Diff settings for specific file types
+*.pdf diff=pdf
+*.docx diff=docx
+*.xlsx diff=xlsx

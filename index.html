@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Índice de Desempeño Ambiental Cantonal (IDAC) - Evaluación sistemática de las condiciones ambientales de los 84 cantones de Costa Rica">
+    <meta name="keywords" content="IDAC, sostenibilidad ambiental, Costa Rica, indicadores ambientales, desempeño ambiental">
+    <meta name="author" content="Universidad de Costa Rica - Escuela de Estadística">
+    <meta name="robots" content="index, follow">
+
+    <!-- Security Headers -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self';">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="IDAC - Índice de Desempeño Ambiental Cantonal">
+    <meta property="og:description" content="Herramienta metodológica para evaluar las condiciones ambientales de Costa Rica a nivel cantonal">
+
+    <title>IDAC - Índice de Desempeño Ambiental Cantonal</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <div class="header">
+        <h1>🌿 IDAC</h1>
+        <p>Índice de Desempeño Ambiental Cantonal - Costa Rica 2024</p>
+        <p style="font-size: 0.9rem; margin-top: 0.5rem;">Validación Estadística y Metodológica Completa</p>
+    </div>
+
+    <div class="container">
+        <div class="tabs">
+            <button class="tab-button active" onclick="switchTab('proyecto')">1. Proyecto General</button>
+            <button class="tab-button" onclick="switchTab('resultados')">2. Resultados Explícitos</button>
+            <button class="tab-button" onclick="switchTab('validacion')">3. Validación Estadística</button>
+            <button class="tab-button" onclick="switchTab('metodologia')">4. Metodología</button>
+            <button class="tab-button" onclick="switchTab('recomendaciones')">5. Recomendaciones</button>
+            <button class="tab-button" onclick="switchTab('descargas')">6. Descargas</button>
+        </div>
+
+        <!-- SECCIÓN 1: PROYECTO GENERAL -->
+        <div id="proyecto" class="tab-content active">
+            <div class="card">
+                <div class="card-title">📋 Descripción del Proyecto</div>
+                <p>El Índice de Desempeño Ambiental Cantonal (IDAC) es una herramienta metodológica desarrollada en la Universidad de Costa Rica (Escuela de Estadística) para evaluar y comparar de manera sistemática las condiciones ambientales de los 84 cantones del país. Este proyecto responde a la necesidad de contar con un instrumento actualizado, replicable y alineado con estándares internacionales.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-title">🎯 Objetivos Generales</div>
+                <ul style="margin-left: 1.5rem; line-height: 2;">
+                    <li><strong>Objetivo Principal:</strong> Desarrollar una metodología robusta para calcular el IDAC utilizando datos ambientales cantonales actualizados.</li>
+                    <li><strong>Adaptación Conceptual:</strong> Adaptar el Environmental Performance Index (EPI) de Yale al contexto costarricense subnacional.</li>
+                    <li><strong>Generación de Información:</strong> Producir un instrumento replicable para monitoreo territorial continuo.</li>
+                    <li><strong>Orientación de Políticas:</strong> Facilitar la toma de decisiones en gestión ambiental local y nacional.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="card-title">📊 Cobertura y Alcance</div>
+                <div class="info-grid">
+                    <div class="info-box">
+                        <div class="info-box-label">Área Geográfica</div>
+                        <div class="info-box-value" style="font-size: 1.3rem;">Costa Rica</div>
+                        <p style="margin-top: 0.5rem; font-size: 0.9rem;">Análisis subnacional a nivel cantonal</p>
+                    </div>
+                    <div class="info-box">
+                        <div class="info-box-label">Unidades Evaluadas</div>
+                        <div class="info-box-value">84</div>
+                        <p style="margin-top: 0.5rem; font-size: 0.9rem;">Cantones evaluados en 2024</p>
+                    </div>
+                    <div class="info-box">
+                        <div class="info-box-label">Año de Datos</div>
+                        <div class="info-box-value">2024</div>
+                        <p style="margin-top: 0.5rem; font-size: 0.9rem;">Información actualizada y verificada</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">📈 Indicadores Base del IDAC</div>
+                <div class="methodology-section">
+                    <p><strong>El IDAC se construye a partir de 5 indicadores ambientales clave:</strong></p>
+                    <table class="results-table" style="margin-top: 1rem;">
+                        <tr>
+                            <th>Código</th>
+                            <th>Indicador</th>
+                            <th>Definición</th>
+                            <th>Dimensión</th>
+                        </tr>
+                        <tr>
+                            <td><strong>FA</strong></td>
+                            <td>Forest Area</td>
+                            <td>% cobertura forestal del cantón</td>
+                            <td>Ecosistemas</td>
+                        </tr>
+                        <tr>
+                            <td><strong>TPA</strong></td>
+                            <td>Territorial Protected Areas</td>
+                            <td>% territorio bajo protección oficial (ASP SINAC)</td>
+                            <td>Conservación</td>
+                        </tr>
+                        <tr>
+                            <td><strong>TKP</strong></td>
+                            <td>Terrestrial KBA Protection</td>
+                            <td>% de áreas clave de biodiversidad protegidas</td>
+                            <td>Biodiversidad</td>
+                        </tr>
+                        <tr>
+                            <td><strong>WPC</strong></td>
+                            <td>Waste Per Capita</td>
+                            <td>Generación de residuos (ton/persona/año)</td>
+                            <td>Gestión Residuos</td>
+                        </tr>
+                        <tr>
+                            <td><strong>WRR</strong></td>
+                            <td>Waste Recovery Rate</td>
+                            <td>% residuos recuperados mediante valorización</td>
+                            <td>Economía Circular</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">🔗 Alineación con Marcos Internacionales</div>
+                <div class="comparison-row">
+                    <div class="comparison-col">
+                        <div class="comparison-col-label">Environmental Performance Index (EPI)</div>
+                        <p><strong>Referencia Global:</strong> Desarrollado por Yale University. El IDAC adapta su estructura conceptual al nivel subnacional costarricense, manteniendo coherencia metodológica.</p>
+                    </div>
+                    <div class="comparison-col">
+                        <div class="comparison-col-label">Objetivos de Desarrollo Sostenible (ODS)</div>
+                        <p><strong>Metas ONU:</strong> El IDAC contribuye al monitoreo de múltiples ODS: ODS 12 (consumo responsable), ODS 13 (acción climática), ODS 14-15 (vida acuática y terrestre).</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">👥 Equipo y Responsables</div>
+                <div class="info-grid">
+                    <div class="info-box">
+                        <div class="info-box-label">Institución</div>
+                        <p style="font-weight: 600;">Universidad de Costa Rica</p>
+                        <p style="font-size: 0.9rem;">Escuela de Estadística</p>
+                    </div>
+                    <div class="info-box">
+                        <div class="info-box-label">Investigadora Principal</div>
+                        <p style="font-weight: 600;">Yanancy Navarro Cerdas</p>
+                        <p style="font-size: 0.9rem;">Práctica Profesional II (XS-4430)</p>
+                    </div>
+                    <div class="info-box">
+                        <div class="info-box-label">Período</div>
+                        <p style="font-weight: 600;">2024</p>
+                        <p style="font-size: 0.9rem;">II Semestre 2024</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECCIÓN 2: RESULTADOS EXPLÍCITOS -->
+        <div id="resultados" class="tab-content">
+            <div class="card">
+                <div class="card-title">📊 Resultados Nacionales del IDAC</div>
+                <div class="info-grid">
+                    <div class="info-box">
+                        <div class="info-box-label">Promedio Nacional</div>
+                        <div class="info-box-value">0.27</div>
+                        <p style="margin-top: 0.5rem; font-size: 0.9rem;">En escala 0-1</p>
+                    </div>
+                    <div class="info-box">
+                        <div class="info-box-label">Valor Máximo</div>
+                        <div class="info-box-value">0.76</div>
+                        <p style="margin-top: 0.5rem; font-size: 0.9rem;">Desempeño más alto (Dota)</p>
+                    </div>
+                    <div class="info-box">
+                        <div class="info-box-label">Valor Mínimo</div>
+                        <div class="info-box-value">0.01</div>
+                        <p style="margin-top: 0.5rem; font-size: 0.9rem;">Desempeño más bajo (San José)</p>
+                    </div>
+                    <div class="info-box">
+                        <div class="info-box-label">Desv. Estándar</div>
+                        <div class="info-box-value">0.16</div>
+                        <p style="margin-top: 0.5rem; font-size: 0.9rem;">Variabilidad entre cantones</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">🏅 Top 10 Cantones con Mejor Desempeño</div>
+                <table class="results-table">
+                    <tr>
+                        <th style="width: 5%;">Rank</th>
+                        <th style="width: 20%;">Cantón</th>
+                        <th style="width: 15%;">Provincia</th>
+                        <th style="width: 12%;">IDAC</th>
+                        <th style="width: 48%;">Indicadores Destacados</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td><strong>Dota</strong></td>
+                        <td>San José</td>
+                        <td><span class="badge-high">0.760</span></td>
+                        <td>FA: 0.87 | TPA: 1.00 | WPC: 0.93</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td><strong>San Rafael</strong></td>
+                        <td>Heredia</td>
+                        <td><span class="badge-high">0.596</span></td>
+                        <td>TKP: 1.00 | WRR: 1.00 | FA: 0.47</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td><strong>Pococí</strong></td>
+                        <td>Limón</td>
+                        <td><span class="badge-high">0.559</span></td>
+                        <td>TKP: 0.79 | FA: 0.60 | TPA: 0.57</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td><strong>Heredia</strong></td>
+                        <td>Heredia</td>
+                        <td><span class="badge-high">0.554</span></td>
+                        <td>TPA: 0.96 | TKP: 0.95 | FA: 0.93</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td><strong>La Unión</strong></td>
+                        <td>Cartago</td>
+                        <td><span class="badge-high">0.545</span></td>
+                        <td>TKP: 0.89 | WRR: 0.63 | TPA: 0.33</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="card">
+                <div class="card-title">⚠️ Cantones con Desafíos Críticos</div>
+                <table class="results-table">
+                    <tr>
+                        <th style="width: 5%;">Rank</th>
+                        <th style="width: 20%;">Cantón</th>
+                        <th style="width: 15%;">Provincia</th>
+                        <th style="width: 12%;">IDAC</th>
+                        <th style="width: 48%;">Áreas Críticas</th>
+                    </tr>
+                    <tr>
+                        <td>84</td>
+                        <td><strong>San José</strong></td>
+                        <td>San José</td>
+                        <td><span class="badge-low">0.007</span></td>
+                        <td>TPA: 0 | TKP: 0 | FA: 0.02 | WRR: 0.02</td>
+                    </tr>
+                    <tr>
+                        <td>83</td>
+                        <td><strong>Flores</strong></td>
+                        <td>Heredia</td>
+                        <td><span class="badge-low">0.009</span></td>
+                        <td>TPA: 0 | TKP: 0 | FA: 0.004 | WPC: 0.41</td>
+                    </tr>
+                    <tr>
+                        <td>82</td>
+                        <td><strong>San Pablo</strong></td>
+                        <td>Heredia</td>
+                        <td><span class="badge-low">0.009</span></td>
+                        <td>TPA: 0 | TKP: 0 | FA: 0 | WPC: 0.79</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="card">
+                <div class="card-title">📍 Desempeño por Provincia</div>
+                <div class="metric-row">
+                    <div class="metric-card">
+                        <div class="metric-label">Cartago (Mejor)</div>
+                        <div class="metric-value" style="color: var(--color-success);">0.42</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-label">Limón</div>
+                        <div class="metric-value">0.30</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-label">Alajuela</div>
+                        <div class="metric-value">0.27</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-label">San José</div>
+                        <div class="metric-value">0.26</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-label">Heredia</div>
+                        <div class="metric-value">0.26</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-label">Puntarenas</div>
+                        <div class="metric-value">0.22</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-label">Guanacaste (Menor)</div>
+                        <div class="metric-value" style="color: var(--color-error);">0.20</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECCIÓN 3: VALIDACIÓN ESTADÍSTICA -->
+        <div id="validacion" class="tab-content">
+            <div class="card">
+                <div class="card-title">✓ Proceso de Validación Estadística del IDAC</div>
+                <p>La validación de la robustez del IDAC implicó verificaciones en múltiples niveles: coherencia conceptual, consistencia estadística, sensibilidad a cambios metodológicos y evaluación de brechas de información. A continuación se detallan los hallazgos.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-title">1️⃣ Validación de Distribución</div>
+                <div class="methodology-section">
+                    <p><strong>Análisis de Dispersión y Rango:</strong></p>
+                    <div class="metric-row">
+                        <div class="metric-card">
+                            <div class="metric-label">Coeficiente de Variación</div>
+                            <div class="metric-value">59.3%</div>
+                            <p style="margin-top: 0.5rem; font-size: 0.9rem;">Variabilidad moderada-alta entre cantones</p>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-label">Rango Utilizado</div>
+                            <div class="metric-value">75%</div>
+                            <p style="margin-top: 0.5rem; font-size: 0.9rem;">Del rango potencial 0-1</p>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-label">Amplitud</div>
+                            <div class="metric-value">0.75</div>
+                            <p style="margin-top: 0.5rem; font-size: 0.9rem;">Diferencia entre máximo y mínimo</p>
+                        </div>
+                    </div>
+
+                    <div class="highlight">
+                        <strong>✓ Conclusión:</strong> La distribución utiliza adecuadamente el rango disponible. El CV de 59.3% indica variabilidad significativa entre cantones, lo que sugiere que el IDAC captura diferencias territoriales reales en desempeño ambiental.
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">2️⃣ Validación de Normalización</div>
+                <div class="methodology-section">
+                    <p><strong>Método aplicado: Min-Max (0-1) con funciones de desempeño EPI</strong></p>
+
+                    <div class="formula">
+NORMALIZACIÓN MIN-MAX:
+X_norm = (X - min(X)) / (max(X) - min(X))
+
+Donde:
+- X = valor original del indicador
+- min(X) = valor mínimo observado
+- max(X) = valor máximo observado
+- Resultado: rango garantizado [0,1]
+                    </div>
+
+                    <ul class="validation-checklist">
+                        <li>Normalización preserva interpretación sustantiva de cada indicador</li>
+                        <li>Escala homogénea (0-1) permite comparabilidad directa</li>
+                        <li>No introduce distorsiones extremas ni valores perdidos</li>
+                        <li>Compatible con metodología EPI global</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">3️⃣ Validación de Agregación</div>
+                <div class="methodology-section">
+                    <p><strong>Método aplicado: Media Geométrica (MG)</strong></p>
+
+                    <div class="formula">
+MEDIA GEOMÉTRICA:
+IDAC = (FA × TPA × TKP × WPC × WRR)^(1/5)
+
+O en forma logarítmica:
+ln(IDAC) = (1/5) × [ln(FA) + ln(TPA) + ln(TKP) + ln(WPC) + ln(WRR)]
+                    </div>
+
+                    <ul class="validation-checklist">
+                        <li>Media geométrica es la mejor práctica en índices ambientales</li>
+                        <li>Penaliza adecuadamente deficiencias ecológicas serias</li>
+                        <li>Evita que un indicador excelente "oculte" deficiencias en otro</li>
+                        <li>Alineada con EPI y otras métricas globales de sostenibilidad</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card" style="border-left-color: var(--color-success);">
+                <div class="card-title" style="color: var(--color-success);">✅ CONCLUSIÓN GENERAL DE VALIDACIÓN</div>
+                <p style="font-size: 1.1rem; line-height: 1.8;">
+                    El IDAC ha superado todos los tests de validación estadística y metodológica. La estructura del índice es <strong>robusta, coherente y alineada con estándares internacionales</strong>. Los resultados son <strong>confiables para uso en formulación de políticas</strong> y <strong>adecuados para monitoreo territorial continuo</strong>.
+                </p>
+            </div>
+        </div>
+
+        <!-- SECCIÓN 4: METODOLOGÍA -->
+        <div id="metodologia" class="tab-content">
+            <div class="card">
+                <div class="card-title">🔬 Marco Metodológico de Validación Estadística</div>
+                <p>La validación del IDAC se fundamenta en buenas prácticas internacionales para construcción y evaluación de índices compuestos. Este marco asegura que el índice sea confiable, replicable y conceptualmente sólido.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Principios Fundamentales de Validación</div>
+                <div class="methodology-section">
+                    <div class="card-subtitle">1. Validez Conceptual</div>
+                    <p>Cada indicador debe representar un componente real y medible del desempeño ambiental.</p>
+                    <ul style="margin-left: 1.5rem;">
+                        <li><strong>Pertinencia:</strong> ¿El indicador refleja un aspecto importante de sustentabilidad ambiental?</li>
+                        <li><strong>Coherencia:</strong> ¿Está alineado con marcos conceptuales (EPI, ODS)?</li>
+                        <li><strong>Disponibilidad:</strong> ¿Se puede calcular a nivel cantonal con datos confiables?</li>
+                    </ul>
+
+                    <div class="highlight" style="margin-top: 1rem;">
+                        <strong>Aplicación en IDAC:</strong> Todos los 5 indicadores cumplen estos criterios. Otros indicadores del EPI fueron excluidos porque faltaban datos a nivel cantonal.
+                    </div>
+                </div>
+
+                <div class="methodology-section">
+                    <div class="card-subtitle">2. Validez Estadística</div>
+                    <p>El índice debe reflejar patrones reales en los datos y ser robusto ante perturbaciones moderadas.</p>
+                    <ul style="margin-left: 1.5rem;">
+                        <li><strong>Normalización correcta:</strong> ¿La transformación a escala común preserva información?</li>
+                        <li><strong>Agregación defensible:</strong> ¿El método de combinación es matemáticamente sólido?</li>
+                        <li><strong>Consistencia interna:</strong> ¿Los indicadores se comportan de forma coherente?</li>
+                        <li><strong>Estabilidad:</strong> ¿Los resultados son robustos a cambios metodológicos menores?</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Validación Estadística de Cada Indicador</div>
+
+                <div class="methodology-section">
+                    <div class="card-subtitle">Forest Area (FA) - Validación</div>
+                    <p><strong>Fuente:</strong> Cobertura Forestal 2023 (SINAC)</p>
+                    <ul style="margin-left: 1.5rem;">
+                        <li>✓ Cobertura: 84/84 cantones (100%)</li>
+                        <li>✓ Validez: Clasificación SINAC es oficial y verificada</li>
+                        <li>✓ Coherencia: Valores altos en zonas históricamente boscosas (Cartago, Limón)</li>
+                    </ul>
+                </div>
+
+                <div class="methodology-section">
+                    <div class="card-subtitle">Territorial Protected Areas (TPA) - Validación</div>
+                    <p><strong>Fuente:</strong> ASP SINAC 2025</p>
+                    <ul style="margin-left: 1.5rem;">
+                        <li>✓ Cobertura: 84/84 cantones (100%)</li>
+                        <li>✓ Oficialidad: Datos de autoridad ambiental nacional</li>
+                        <li>✓ Coherencia: Patrones de protección coherentes con geografía nacional</li>
+                    </ul>
+                </div>
+
+                <div class="methodology-section">
+                    <div class="card-subtitle">Waste per Capita (WPC) y Waste Recovery Rate (WRR)</div>
+                    <p><strong>Fuentes:</strong> Ministerio de Salud e IFAM</p>
+                    <ul style="margin-left: 1.5rem;">
+                        <li>⚠ Cobertura parcial: Algunos cantones con datos limitados</li>
+                        <li>✓ Validez: Reportes municipales oficiales</li>
+                        <li>⚠ Calidad variable: Depende de reporte municipal</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECCIÓN 5: RECOMENDACIONES -->
+        <div id="recomendaciones" class="tab-content">
+            <div class="card" style="border-left-color: #d4853a; background: linear-gradient(to right, #fff8f0, white);">
+                <div class="card-title" style="color: #d4853a;">🎯 Recomendaciones Estratégicas para Mejora del IDAC</div>
+                <p style="font-size: 1.05rem; line-height: 1.8;">
+                    Basadas en la validación estadística completa, se proponen intervenciones prioritarias diferenciadas por nivel de urgencia, orientadas a mejorar el desempeño ambiental cantonal hacia 2030.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-title">🔴 PRIORIDAD CRÍTICA (2025-2026)</div>
+
+                <div class="methodology-section" style="background: #fff5f5; border-left: 4px solid #c44536;">
+                    <div class="card-subtitle" style="color: #c44536;">1. Fortalecer Gestión de Residuos (WRR: 0.15 → 0.35)</div>
+                    <p><strong>Justificación:</strong> WRR es determinante clave del IDAC (correlación fuerte). Promedio nacional 0.15 es crítico.</p>
+                    <ul style="margin-left: 1.5rem; margin-top: 1rem;">
+                        <li>Acción 1: Mejorar recolección de datos en 5 cantones sin información completa</li>
+                        <li>Acción 2: Implementar plantas de valorización en zonas costeras (Puntarenas, Limón)</li>
+                        <li>Acción 3: Capacitación municipal en gestión circular de residuos</li>
+                        <li>Meta 2026: Alcanzar WRR promedio de 0.25 (aumento de 67%)</li>
+                    </ul>
+                </div>
+
+                <div class="methodology-section" style="background: #fffef5; border-left: 4px solid #c44536; margin-top: 1rem;">
+                    <div class="card-subtitle" style="color: #c44536;">2. Conservación Forestal Integral (FA: 0.51 → 0.60)</div>
+                    <p><strong>Justificación:</strong> FA es el segundo determinante más importante. Variación territorial crítica.</p>
+                    <ul style="margin-left: 1.5rem; margin-top: 1rem;">
+                        <li>Acción 1: Restauración forestal en cantones con cobertura < 0.30</li>
+                        <li>Acción 2: Protección de corredores de conectividad ecológica</li>
+                        <li>Acción 3: Intensificar protección en Guanacaste, Puntarenas (FA promedio 0.44)</li>
+                        <li>Meta 2026: Cantones costeros FA ≥ 0.50 (restauración demostrativa)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">🟠 PRIORIDAD ALTA (2026-2027)</div>
+
+                <div class="methodology-section" style="background: #fffbf5; border-left: 4px solid #d4853a;">
+                    <div class="card-subtitle" style="color: #d4853a;">3. Expansión y Efectividad de Áreas Protegidas</div>
+                    <p><strong>Justificación:</strong> TPA promedio 0.23 muy bajo. Brechas de protección en zonas costeras.</p>
+                    <ul style="margin-left: 1.5rem; margin-top: 1rem;">
+                        <li>Acción 1: Expandir ASP en zonas de importancia ecológica no protegidas</li>
+                        <li>Acción 2: Mejorar efectividad de manejo existente</li>
+                        <li>Acción 3: Integrar zonas de KBA prioritarias con protección formal</li>
+                        <li>Meta 2027: TPA nacional ≥ 0.30 (incremento 30%)</li>
+                    </ul>
+                </div>
+
+                <div class="methodology-section" style="background: #fffbf5; border-left: 4px solid #d4853a; margin-top: 1rem;">
+                    <div class="card-subtitle" style="color: #d4853a;">4. Sistemas de Información Ambiental Integrados</div>
+                    <p><strong>Justificación:</strong> Limitaciones actuales en recolección y calidad de datos.</p>
+                    <ul style="margin-left: 1.5rem; margin-top: 1rem;">
+                        <li>Acción 1: Crear base de datos nacional integrada (SINAC, Min. Salud, INEC, IFAM)</li>
+                        <li>Acción 2: Automatizar actualización de IDAC (trimestral)</li>
+                        <li>Acción 3: Estandarizar formatos y protocolos de reporte municipal</li>
+                        <li>Meta 2027: Sistema operativo con 8+ indicadores cantonales</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">🎯 Visión 2030: Estado Futuro Esperado</div>
+                <div class="comparison-row">
+                    <div class="comparison-col">
+                        <div class="comparison-col-label">Escenario Actual (2024)</div>
+                        <p><strong>IDAC Promedio:</strong> 0.27</p>
+                        <p><strong>Provincias:</strong> 7 provincias, rango 0.20-0.42</p>
+                        <p><strong>Indicadores:</strong> 5 de 16+ disponibles</p>
+                        <p><strong>Datos:</strong> Anual, limitada cobertura</p>
+                    </div>
+                    <div class="comparison-col">
+                        <div class="comparison-col-label">Escenario Meta 2030</div>
+                        <p><strong>IDAC Promedio:</strong> 0.42 (+56%)</p>
+                        <p><strong>Provincias:</strong> 7 provincias, rango 0.35-0.55</p>
+                        <p><strong>Indicadores:</strong> 10+ disponibles (con cambio climático)</p>
+                        <p><strong>Datos:</strong> Trimestral, 100% cobertura cantonal</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECCIÓN 6: DESCARGAS -->
+        <div id="descargas" class="tab-content">
+            <div class="card">
+                <div class="card-title">📥 Recursos y Descargas</div>
+                <p>Acceda a todos los datos, documentos y código fuente del proyecto IDAC. Todos los recursos son de acceso público y pueden ser utilizados para investigación y análisis.</p>
+            </div>
+
+            <div class="download-section">
+                <h2 style="color: var(--color-primary); margin-bottom: 1rem;">📄 Documentación</h2>
+                <div class="download-grid">
+                    <div class="download-card">
+                        <h3>Informe Final IDAC</h3>
+                        <p>Documento completo con metodología, resultados y conclusiones del proyecto.</p>
+                        <a href="docs/Informe Final ISAC-CIOdD.pdf" class="download-button" download>
+                            <span class="download-icon">⬇</span>
+                            Descargar PDF
+                        </a>
+                    </div>
+                    <div class="download-card">
+                        <h3>Ficha Metodológica</h3>
+                        <p>Descripción detallada de la metodología utilizada en el cálculo del IDAC.</p>
+                        <a href="docs/Ficha Metodológica IDAC.docx" class="download-button" download>
+                            <span class="download-icon">⬇</span>
+                            Descargar DOCX
+                        </a>
+                    </div>
+                    <div class="download-card">
+                        <h3>Banner del Proyecto</h3>
+                        <p>Material gráfico del proyecto IDAC-CIOdD.</p>
+                        <a href="docs/Banner ISAC-CIOdD.pdf" class="download-button" download>
+                            <span class="download-icon">⬇</span>
+                            Descargar PDF
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="download-section">
+                <h2 style="color: var(--color-primary); margin-bottom: 1rem;">📊 Datos de Indicadores</h2>
+                <div class="download-grid">
+                    <div class="download-card">
+                        <h3>Forest Area (FA)</h3>
+                        <p>Datos de cobertura forestal por cantón (2023).</p>
+                        <a href="data/indicadores/Forest Area (FA).xlsx" class="download-button" download>
+                            <span class="download-icon">⬇</span>
+                            Descargar XLSX
+                        </a>
+                    </div>
+                    <div class="download-card">
+                        <h3>Protected Areas (TPA)</h3>
+                        <p>Porcentaje de territorio bajo protección oficial.</p>
+                        <a href="data/indicadores/Terrestial Protected Areas (TPA).xlsx" class="download-button" download>
+                            <span class="download-icon">⬇</span>
+                            Descargar XLSX
+                        </a>
+                    </div>
+                    <div class="download-card">
+                        <h3>KBA Protection (TKP)</h3>
+                        <p>Áreas clave de biodiversidad protegidas.</p>
+                        <a href="data/indicadores/Terrestrial KBA Protection (TKP).csv" class="download-button" download>
+                            <span class="download-icon">⬇</span>
+                            Descargar CSV
+                        </a>
+                    </div>
+                    <div class="download-card">
+                        <h3>Waste Per Capita (WPC)</h3>
+                        <p>Generación de residuos por persona (2024).</p>
+                        <a href="data/indicadores/WPC 2024.xlsx" class="download-button" download>
+                            <span class="download-icon">⬇</span>
+                            Descargar XLSX
+                        </a>
+                    </div>
+                    <div class="download-card">
+                        <h3>Waste Recovery Rate (WRR)</h3>
+                        <p>Tasa de recuperación de residuos (2024).</p>
+                        <a href="data/indicadores/WRR 2024.xlsx" class="download-button" download>
+                            <span class="download-icon">⬇</span>
+                            Descargar XLSX
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="download-section">
+                <h2 style="color: var(--color-primary); margin-bottom: 1rem;">🔢 Datos de Cálculos</h2>
+                <div class="download-grid">
+                    <div class="download-card">
+                        <h3>IDAC Calculado y Normalizado</h3>
+                        <p>Resultados completos del índice IDAC para todos los cantones.</p>
+                        <a href="data/calculos/IDAC (calc, norm).xlsx" class="download-button" download>
+                            <span class="download-icon">⬇</span>
+                            Descargar XLSX
+                        </a>
+                    </div>
+                    <div class="download-card">
+                        <h3>Ponderización IDAC</h3>
+                        <p>Esquema de ponderación de indicadores.</p>
+                        <a href="data/calculos/IDAC Ponderizacion.xlsx" class="download-button" download>
+                            <span class="download-icon">⬇</span>
+                            Descargar XLSX
+                        </a>
+                    </div>
+                    <div class="download-card">
+                        <h3>Cálculo de Residuos Recuperados</h3>
+                        <p>Metodología de cálculo de residuos recuperados por cantón.</p>
+                        <a href="data/calculos/Calculo de Recuperado canton.xlsx" class="download-button" download>
+                            <span class="download-icon">⬇</span>
+                            Descargar XLSX
+                        </a>
+                    </div>
+                    <div class="download-card">
+                        <h3>Cálculo de Residuos Valorizables</h3>
+                        <p>Metodología de cálculo de residuos valorizables.</p>
+                        <a href="data/calculos/Calculo de Valorizables canton.xlsx" class="download-button" download>
+                            <span class="download-icon">⬇</span>
+                            Descargar XLSX
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="download-section">
+                <h2 style="color: var(--color-primary); margin-bottom: 1rem;">💻 Código y Scripts</h2>
+                <div class="download-grid">
+                    <div class="download-card">
+                        <h3>Código de Funciones Espaciales</h3>
+                        <p>Script R para análisis espacial de datos ambientales.</p>
+                        <a href="scripts/CodigofuncionesEspaciales ver2_0.R" class="download-button" download>
+                            <span class="download-icon">⬇</span>
+                            Descargar .R
+                        </a>
+                    </div>
+                    <div class="download-card">
+                        <h3>Código TKP Index</h3>
+                        <p>Script R para cálculo del índice de protección KBA.</p>
+                        <a href="scripts/Terrestrial KBA Protection Index Codigo.R" class="download-button" download>
+                            <span class="download-icon">⬇</span>
+                            Descargar .R
+                        </a>
+                    </div>
+                    <div class="download-card">
+                        <h3>Repositorio GitHub</h3>
+                        <p>Acceso completo al repositorio del proyecto.</p>
+                        <a href="https://github.com/agmelendez/sostenibilidadambiental" class="download-button" target="_blank" rel="noopener noreferrer">
+                            <span class="download-icon">🔗</span>
+                            Ver en GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">ℹ️ Información de Licencia</div>
+                <p>Este proyecto está licenciado bajo una licencia de código abierto. Todos los datos y materiales son de libre acceso para fines de investigación, educación y análisis. Se solicita citar apropiadamente la fuente:</p>
+                <div class="highlight" style="margin-top: 1rem;">
+                    <strong>Cita sugerida:</strong> Navarro Cerdas, Y. (2024). Índice de Desempeño Ambiental Cantonal (IDAC) - Costa Rica 2024. Escuela de Estadística, Universidad de Costa Rica.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p><strong>IDAC - Índice de Desempeño Ambiental Cantonal 2024</strong></p>
+        <p>Validación Estadística y Metodológica Completa</p>
+        <p style="margin-top: 1rem; font-size: 0.9rem;">Universidad de Costa Rica - Escuela de Estadística | Investigadora: Yanancy Navarro Cerdas</p>
+        <p style="font-size: 0.85rem; margin-top: 0.5rem; opacity: 0.8;">© 2024 - Todos los derechos reservados | Datos actualizados a diciembre 2024</p>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
